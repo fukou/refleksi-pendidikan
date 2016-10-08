@@ -269,8 +269,9 @@
                 }
             });
             
-            $('.direction-opened').click(function() {
+            $('.direction-opened').click(function(e) {
                 $('.direction_page').addClass('is-moved-to-left');
+                e.preventDefault();
             });
             
             // it will goes to the second layer when you use arrow down on your keyboard and vice versa
