@@ -908,6 +908,10 @@ section.third_layer:after {
     display: none;
 }
 
+#first-main-explaination article:nth-child(5n):after {
+    display: none;
+}
+
 #first-main-explaination article:before {
     position: absolute;
     background-color: #e7e7e7;
