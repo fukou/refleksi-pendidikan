@@ -1,6 +1,6 @@
 /************ MOBILE ***********/
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
     body.noscroll {
         overflow-y: scroll;
         overflow-x: hidden;
@@ -111,6 +111,18 @@
     .menu_bar {
         display: none;
     }
+    
+    .mobile-desc-header {
+        width:calc(100% + 50vw);
+        height:300px;
+        margin: 50px 0 50px -50%;
+        background-color:#222;
+        display: block!important;
+        visibility: visible;
+        background-image: url(img/anak-sd.jpg);
+        background-size: cover;
+    }
+    
     .main-mobile-desc {
         position: relative;
         display: block!important;

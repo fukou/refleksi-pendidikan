@@ -570,7 +570,7 @@ header .to-bottom:after {
     }
 }
 
-.main-mobile-desc {
+.main-mobile-desc, .mobile-desc-header {
     visibility: hidden;
     display: none;
 }
