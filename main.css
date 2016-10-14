@@ -235,8 +235,8 @@ header .header-overlay {
 .fade-in {
     opacity: 0;
     -webkit-animation: fadeIn cubic-bezier(.77, 0, .175, 1) 1;
-    -moz-animation: fadeIn  cubic-bezier(.77, 0, .175, 1) cubic-bezier(.77, 0, .175, 1) 1;
-    animation: fadeIn  cubic-bezier(.77, 0, .175, 1) 1;
+    -moz-animation: fadeIn cubic-bezier(.77, 0, .175, 1) cubic-bezier(.77, 0, .175, 1) 1;
+    animation: fadeIn cubic-bezier(.77, 0, .175, 1) 1;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
