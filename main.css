@@ -570,6 +570,11 @@ header .to-bottom:after {
     }
 }
 
+.main-mobile-desc {
+    visibility: hidden;
+    display: none;
+}
+
 .menu_bar {
     position: fixed;
     top: 25px;
