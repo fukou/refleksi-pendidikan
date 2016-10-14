@@ -31,7 +31,7 @@
 </head>
 
 <body class="noscroll">
-<!-- 
+    <!-- 
     <div class="direction_page">
         <div class="direction_holder">
             <h1>Refleksi Pendidikan di Indonesia</h1>
@@ -49,7 +49,7 @@
         </div>
     </div>
  -->
-    
+
     <div class="nav-toggle-mobile">
         <ul>
             <li><span></span> <a href="#" onclick="$('header').animatescroll({scrollSpeed:600,easing:'easeOutQuart'}); return false;">Introduksi</a></li>
@@ -73,7 +73,7 @@
                 <li><a href="#" onclick="$('.fourth_layer').animatescroll({scrollSpeed:600,easing:'easeOutQuart'}); return false;">Pemerataan Akses Pendidikan</a></li>
             </ul>
         </nav>
-        
+
         <!--
         <div class="fk_crd">
             <svg id="fukuo_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.6 147.3">
@@ -92,7 +92,7 @@
             FUKUO
         </div>
     -->
-        
+
     </div>
     <header>
         <div class="header-overlay"></div>
@@ -193,6 +193,19 @@
     </section>
 
     <section class="fourth_layer">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-video">
+            <source src="video/big_buck_bunny.webm" type="video/webm">
+            <source src="video/Clip_6.mp4" type="video/mp4">
+            <source src="video/Clip_62.ogv" type="video/ogg">
+        </video>
+
+        <div class="second_description">
+            <h1>Pemerataan Akses Pendidikan</h1>
+            <p>
+                Pemerataan dan perluasan akses pendidikan diarahkan pada upaya memperluas daya tampung satuan pendidikan serta memberikan kesempatan yang sama bagi semua peserta didik dari berbagai golongan masyarakat yang berbeda baik secara sosial, ekonomi, gender, lokasi tempat tinggal dan tingkat kemampuan intelektual serta kondisi fisik.
+            </p>
+        </div>
+
     </section>
 
 
@@ -232,9 +245,8 @@
                 $navtoggle = $('.nav-toggle'),
                 $header = $('header'),
                 $layer_two = $('section.second_layer'),
-                $layer_three = $('section.third_layer'),
-                $layer_four = $('section.fourth_layer'),
-                $misc = $('header h1, header h4, .main_description, .to-bottom, #first-main-explaination'),
+                $layer_three = $('section.third_layer, section.fourth_layer'),
+                $misc = $('header h1, header h4, .main_description, .to-bottom, #first-main-explaination, .second_description'),
                 $overlay = $('.header-overlay-moved');
 
             $menubar.add($close).click(function (e) {
@@ -249,7 +261,7 @@
                 } else {
                     $navtoggle.addClass('is-visible');
                     $header.addClass('is-moved');
-                    $layer_two.add($layer_three, $layer_four).addClass('is-moved');
+                    $layer_two.add($layer_three).addClass('is-moved');
                     $overlay.addClass('is-shown');
                     $menubar.addClass('is-gone');
                     $misc.addClass('is-blurred');
@@ -262,19 +274,19 @@
                 var $this = $(this);
                 if ($navtoggle.hasClass('is-visible') || $overlay.hasClass('is-shown')) {
                     $menubar.removeClass('is-gone');
-                    $layer_two.add($layer_three, $layer_four).removeClass('is-moved');
+                    $layer_two.add($layer_three).removeClass('is-moved');
                     $header.removeClass('is-moved');
                     $navtoggle.removeClass('is-visible');
                     $this.removeClass('is-shown');
                     $misc.removeClass('is-blurred');
                 }
             });
-            
-            $('.direction-opened').click(function(e) {
+
+            $('.direction-opened').click(function (e) {
                 $('.direction_page').addClass('is-moved-to-left');
                 e.preventDefault();
             });
-            
+
             // it will goes to the second layer when you use arrow down on your keyboard and vice versa
             $(document).keydown(function (key) {
                 switch (parseInt(key.which, 10)) {

@@ -139,10 +139,12 @@ h4:after,
 header,
 .second_layer,
 .third_layer,
+.fourth_layer,
 .header-overlay-moved,
 .main_description,
 .to-bottom,
 #first-main-explaination,
+.second_description,
 .direction_page {
     -webkit-transition: all .5s cubic-bezier(.77, 0, .175, 1);
     -moz-transition: all .5s cubic-bezier(.77, 0, .175, 1);
@@ -157,7 +159,8 @@ header {
 
 header.is-moved,
 .second_layer.is-moved,
-.third_layer.is-moved {
+.third_layer.is-moved,
+.fourth_layer.is-moved {
     left: 50%;
 }
 
@@ -165,7 +168,8 @@ header h1.is-blurred,
 header h4.is-blurred,
 .main_description.is-blurred,
 .to-bottom.is-blurred,
-#first-main-explaination.is-blurred {
+#first-main-explaination.is-blurred,
+.second_description.is-blurred {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -793,14 +797,39 @@ section.fourth_layer {
     background-color: #222;
 }
 
-#fukuo_icon {
-    width: 30px;
-    vertical-align: middle;
+section.fourth_layer:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: rgba(44, 29, 29, 0.51);
 }
 
-.fk_crd {
+section.fourth_layer .fullscreen-video {
     position: absolute;
-    font-family: "Fukuo", monospace;
-    bottom: 5%;
-    left: 10%;
+    top: 0%;
+    left: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+
+.second_description {
+    position: absolute;
+    left:50%;
+    top:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width:calc(600px + 1.5vw);
+    color:white;
+    font-size: calc(16px + 0.25vw);
+    font-family: 'Source Sans Pro';
+    line-height: 170%;
+    z-index: 1;
 }
