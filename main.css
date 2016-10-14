@@ -977,3 +977,7 @@ section.fourth_layer .fullscreen-video {
     line-height: 170%;
     z-index: 1;
 }
+
+.main-mobile-desc footer {
+    display: none;
+}
