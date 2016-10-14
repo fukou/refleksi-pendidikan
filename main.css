@@ -638,6 +638,7 @@ section.second_layer {
     top: 100%;
     background-color: #000;
     background-size: cover;
+    overflow-x: hidden;
     background-image: url(img/anak-sd.jpg);
 }
 
@@ -660,6 +661,15 @@ section.second_layer {
     font-family: 'Source Sans Pro', sans-serif;
     width: calc(600px + 1.5vw);
     line-height: 180%;
+}
+
+.main_inner-description {
+    margin:6% 0 0% 0;
+}
+
+.main_inner-description svg {
+    fill:#fab2b2;
+    margin:0 3% 0 2%;
 }
 
 .main_description h1, .second_description h1 {
