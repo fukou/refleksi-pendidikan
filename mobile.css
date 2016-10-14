@@ -115,8 +115,9 @@
         position: relative;
         display: block!important;
         visibility: visible;
-        margin: 350px auto;;
+        margin: 350px auto;
         padding-bottom: 50px;
+        margin-bottom: -100px;
         width: calc(400px + 0.15vw);
         max-width: 100%;
         color: #444;
