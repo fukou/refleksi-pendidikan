@@ -173,7 +173,12 @@ header h4.is-blurred,
 .main_description.is-blurred,
 .to-bottom.is-blurred,
 #first-main-explaination.is-blurred,
-.second_description.is-blurred {
+.second_description.is-blurred,
+#circle-svg-one.is-blurred,
+#circle-svg-two.is-blurred,
+#rectangle-svg-one.is-blurred,
+#rectangle-svg-two.is-blurred,
+.fullscreen-video.is-blurred {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -189,6 +194,104 @@ header .header-overlay {
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        transform: translate(0px, -90px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        transform: translate(0px, -90px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translate(0px, -90px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    -webkit-animation: fadeIn cubic-bezier(.77, 0, .175, 1) 1;
+    -moz-animation: fadeIn  cubic-bezier(.77, 0, .175, 1) cubic-bezier(.77, 0, .175, 1) 1;
+    animation: fadeIn  cubic-bezier(.77, 0, .175, 1) 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.3s;
+    -moz-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+}
+
+#circle-svg-one,
+#circle-svg-two,
+#rectangle-svg-one,
+#rectangle-svg-two {
+    position: absolute;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+#circle-svg-one {
+    left: 5%;
+    top: 50%;
+    width: 120px;
+}
+
+#circle-svg-two {
+    right: 5%;
+    top: 30%;
+    width: 120px;
+}
+
+.circle-svg {
+    fill: none;
+    stroke: #ffde95;
+    stroke-width: 25;
+    stroke-miterlimit: 10;
+}
+
+#rectangle-svg-one {
+    left: 15%;
+    top: 15%;
+    width: 90px;
+}
+
+#rectangle-svg-two {
+    right: 15%;
+    bottom: 15%;
+    width: 90px;
+}
+
+.rectangle-svg {
+    fill: none;
+    stroke: #c74045;
+    stroke-width: 25;
+    stroke-miterlimit: 10;
 }
 
 section .second_layer_overlay:before {
@@ -664,15 +767,16 @@ section.second_layer {
 }
 
 .main_inner-description {
-    margin:6% 0 0% 0;
+    margin: 6% 0 0% 0;
 }
 
 .main_inner-description svg {
-    fill:#fab2b2;
-    margin:0 3% 0 2%;
+    fill: #ffde95;
+    margin: 0 3% 0 2%;
 }
 
-.main_description h1, .second_description h1 {
+.main_description h1,
+.second_description h1 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
@@ -770,6 +874,18 @@ section.third_layer:after {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+#first-main-explaination article b {
+    background-color: #ffde95;
+    color: #a0771b;
+    padding: 2px 6px 2px 6px;
+}
+
+#first-main-explaination i {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #c74045;
+}
+
 #first-main-explaination article:nth-child(1n):after {
     content: '';
     top: -180px;
@@ -841,12 +957,12 @@ section.fourth_layer .fullscreen-video {
 
 .second_description {
     position: absolute;
-    left:50%;
-    top:50%;
+    left: 50%;
+    top: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-    width:calc(600px + 1.5vw);
-    color:white;
+    width: calc(600px + 1.5vw);
+    color: white;
     font-size: calc(16px + 0.25vw);
     font-family: 'Source Sans Pro';
     line-height: 170%;

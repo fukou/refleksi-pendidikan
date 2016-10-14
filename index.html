@@ -35,11 +35,10 @@ CREDIT:
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <script src="jquery-2.2.0.min.js"></script>
-    <script src="http://static.tumblr.com/5ojoydj/ORDn2opj4/fukuo-scroll.js"></script>
+    <script src="jquery-animatescroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
 
 </head>
-
 <body class="noscroll">
 
     <!--
@@ -99,6 +98,23 @@ CREDIT:
 
             </a>
         </div>
+
+        <svg id="circle-svg-one" class="fade-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+            <ellipse class="circle-svg" cx="255.4" cy="236.7" rx="92.8" ry="93.2" />
+        </svg>
+
+        <svg id="circle-svg-two" class="fade-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+            <ellipse class="circle-svg" cx="255.4" cy="236.7" rx="92.8" ry="93.2" />
+        </svg>
+
+        <svg id="rectangle-svg-one" class="fade-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+            <path class="rectangle-svg" d="M319.6 321.4H90.3c-5.5 0-10-4.5-10-10V82.8c0-5.5 4.5-10 10-10h229.3c5.5 0 10 4.5 10 10v228.6c0 5.6-4.5 10-10 10z" />
+        </svg>
+
+        <svg id="rectangle-svg-two" class="fade-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+            <path class="rectangle-svg" d="M319.6 321.4H90.3c-5.5 0-10-4.5-10-10V82.8c0-5.5 4.5-10 10-10h229.3c5.5 0 10 4.5 10 10v228.6c0 5.6-4.5 10-10 10z" />
+        </svg>
+
         <div class="main-title">
             <h1>Pendidikan di Indonesia</h1>
             <h4>Refleksi dalam dunia pendidikan</h4>
@@ -152,7 +168,7 @@ CREDIT:
                         <path id="XMLID_11_" class="st0" d="M18.3 24C33.7 24 33.7 46 49 46c15.4 0 15.4-22 30.8-22s15.4 22 30.8 22 15.4-22 30.8-22 15.4 22 30.8 22" />
                     </g>
                 </svg>
-                Refleksi menurut Tahir adalah suatu tindakan atau kegiatan untuk mengetahui serta memahami apa yang terjadi sebelumnya, belum terjadi, dihasilkan apa yang belum dihasilkan, atau apa yang belum tuntas dari suatu upaya atau tindakan yang telah dilakukan.
+                <b>Refleksi</b> menurut <i>Tahir</i> adalah suatu tindakan atau kegiatan untuk mengetahui serta memahami apa yang terjadi sebelumnya, belum terjadi, dihasilkan apa yang belum dihasilkan, atau apa yang belum tuntas dari suatu upaya atau tindakan yang telah dilakukan.
             </article>
 
             <article>
@@ -169,7 +185,7 @@ CREDIT:
                         <path id="XMLID_11_" class="st0" d="M18.3 24C33.7 24 33.7 46 49 46c15.4 0 15.4-22 30.8-22s15.4 22 30.8 22 15.4-22 30.8-22 15.4 22 30.8 22" />
                     </g>
                 </svg>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                Sedangkan kata <b>pendidikan</b> berasal dari kata didik yang artinya adalah suatu proses pengajaran yang mengarahkan generasi muda bangsa menjadi <i>pribadi yang cerdas dan kaya moral</i>. Pendidikan hadir dengan tujuan mencerdaskan kehidupan bangsa.
             </article>
 
             <article>
@@ -186,7 +202,7 @@ CREDIT:
                         <path id="XMLID_11_" class="st0" d="M18.3 24C33.7 24 33.7 46 49 46c15.4 0 15.4-22 30.8-22s15.4 22 30.8 22 15.4-22 30.8-22 15.4 22 30.8 22" />
                     </g>
                 </svg>
-                A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                Dengan demikian,
             </article>
 
             <article>
@@ -250,7 +266,7 @@ CREDIT:
                 $header = $('header'),
                 $layer_two = $('section.second_layer'),
                 $layer_three = $('section.third_layer, section.fourth_layer'),
-                $misc = $('header h1, header h4, .main_description, .to-bottom, #first-main-explaination, .second_description'),
+                $misc = $('header h1, header h4, .main_description, .to-bottom, #first-main-explaination, .second_description, #circle-svg-one, #circle-svg-two, #rectangle-svg-one, #rectangle-svg-one, .fullscreen-video'),
                 $overlay = $('.header-overlay-moved');
 
             $menubar.add($close).click(function (e) {
@@ -327,9 +343,10 @@ CREDIT:
                     return; // exit this handler for other keys
                 }
             });
-
+            
         });
     </script>
 
 </body>
+
 </html>
