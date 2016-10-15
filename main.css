@@ -8,6 +8,19 @@ body.noscroll {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    width: 4px;
+    background-color: #555;
+}
+
 @font-face {
     font-family: "fukuo";
     src: url('https://dl.dropboxusercontent.com/u/36901456/slkscr.ttf');
@@ -570,7 +583,8 @@ header .to-bottom:after {
     }
 }
 
-.main-mobile-desc, .mobile-desc-header {
+.main-mobile-desc,
+.mobile-desc-header {
     visibility: hidden;
     display: none;
 }
@@ -952,6 +966,18 @@ section.fourth_layer:before {
     background-color: rgba(44, 29, 29, 0.51);
 }
 
+section.fourth_layer:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+}
+
 section.fourth_layer .fullscreen-video {
     position: absolute;
     top: 0%;
@@ -960,22 +986,24 @@ section.fourth_layer .fullscreen-video {
     min-height: 100%;
     width: 100%;
     height: auto;
-    background: url(polina.jpg) no-repeat;
-    background-size: cover;
+}
+
+.second_description,
+.second_description-r {
+    text-align: left;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-size: calc(12px + .35vw);
+    font-family: 'Source Sans Pro';
+    line-height: 170%;
+    z-index: 1;
 }
 
 .second_description {
     position: absolute;
-    left: 50%;
+    left: 8%;
     top: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    width: calc(680px + 3vw);
-    color: white;
-    font-size: calc(12px + 0.35vw);
-    font-family: 'Source Sans Pro';
-    line-height: 170%;
-    z-index: 1;
+    width: calc(50% - 11vw);
 }
 
 .second_description ul li {
@@ -987,16 +1015,63 @@ section.fourth_layer .fullscreen-video {
 .second_description ul li:before {
     content: '';
     position: absolute;
-    left:-40px;
-    top:10px;
-    width:10px;
-    height:10px;
-    background-color:#f87d7d;
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
+    left: -40px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #f87d7d;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
     border-radius: 100%;
+}
+
+.second_description-r {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    width: calc(50% - 11vw);
+}
+
+.second_description-r a {
+    color: #fff;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #fff;
+}
+
+.second_description-r span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: calc(20px + 0.25vw);
+}
+
+#i-code,
+#i-github {
+    vertical-align: -10px;
+    margin-right: 10px;
 }
 
 .main-mobile-desc footer {
     display: none;
+}
+
+.social-media {
+    position: relative;
+}
+
+.social-media:before {
+    content: '';
+    position: absolute;
+    left:0px;
+    top:0px;
+    margin-top:10px;
+    width:20%;
+    height:2px;
+    background-color:#fff;
+}
+
+.social-media svg {
+    width:32px;
+    margin-top:40px;
+    margin-right: 20px;
+    cursor: pointer;
 }

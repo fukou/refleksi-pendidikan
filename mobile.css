@@ -108,6 +108,9 @@
     section.fourth_layer {
         display: none;
     }
+    .social-media svg {
+        margin-top:40px!important;
+    }
     .menu_bar {
         display: none;
     }
@@ -118,6 +121,16 @@
         margin-top: 50px;
         text-transform: uppercase;
         display: block!important;
+    }
+    .main-mobile-desc footer span {
+        font-family: 'Playfair Display', serif;
+        text-transform: none;
+        font-style: italic;
+        color:#111;
+        font-size:20px;
+        font-weight: bold;
+        padding-top:20px;
+        border-top:5px solid #ddd;
     }
     .main-mobile-desc a {
         color: #111;
@@ -139,8 +152,8 @@
         display: block!important;
         visibility: visible;
         margin: 350px auto;
-        padding-bottom: 50px;
-        margin-bottom: -100px;
+        padding-bottom: 100px;
+        margin-bottom: 0px;
         width: calc(400px + 0.15vw);
         max-width: 100%;
         color: #444;
@@ -153,9 +166,14 @@
         font-size: calc(24px + 0.25vw);
         padding-bottom: 10px;
     }
-    .main-mobile-desc svg {
+    .main-mobile-desc svg.mobile-svg {
         margin: 50px 20px 0 20px;
         fill: #c74045;
+    }
+    #i-code,
+    #i-github {
+        vertical-align: -10px;
+        margin-right: 10px;
     }
     .main-mobile-desc h2:after {
         content: '';
