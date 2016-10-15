@@ -845,7 +845,7 @@ section.third_layer {
     top: 50%;
     -webkit-transform: translateY(-35%);
     transform: translateY(-35%);
-    left: 25px;
+    left: 100px;
     padding: 8% 8% 0 8%;
     cursor: -webkit-grab;
     cursor: grab;
